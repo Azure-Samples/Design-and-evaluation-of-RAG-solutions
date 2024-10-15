@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickConnect Customer Service Documentation - Remote Desktop Setups</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f7f7f7;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3 {
+            color: #333;
+            border-bottom: 2px solid #e2e2e2;
+            padding-bottom: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table th, table td {
+            padding: 10px;
+            border: 1px solid #e2e2e2;
+            text-align: left;
+        }
+        ul, ol {
+            margin-bottom: 20px;
+        }
+        .note {
+            font-style: italic;
+            color: #6c757d;
+        }
+        .important {
+            color: #d9534f;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>QuickConnect Customer Service Documentation</h1>
+        <h2>Helping with Remote Desktop Setups</h2>
+        <p>Providing support for remote desktop setups is a common task for QuickConnect customer service agents. This document serves as a comprehensive guide to assist customers in setting up remote desktop access using their QuickConnect internet service. Follow the steps and guidelines below to ensure an efficient and effective support experience.</p>
+
+        <h3>Table of Contents</h3>
+        <ol>
+            <li><a href="#understanding-remote-desktop">Understanding Remote Desktop</a></li>
+            <li><a href="#prerequisites">Prerequisites for Remote Desktop Setup</a></li>
+            <li><a href="#setup-windows-remote-desktop">Setting Up Windows Remote Desktop</a></li>
+            <li><a href="#setup-mac-remote-desktop">Setting Up Mac Remote Desktop</a></li>
+            <li><a href="#troubleshooting-common-issues">Troubleshooting Common Issues</a></li>
+            <li><a href="#security-tips">Security Tips</a></li>
+            <li><a href="#additional-resources">Additional Resources</a></li>
+        </ol>
+
+        <h3 id="understanding-remote-desktop">1. Understanding Remote Desktop</h3>
+        <p>Remote Desktop is a technology that allows a user to connect to and control a computer or a network remotely over the internet. This is particularly useful for telecommuting, IT support, and accessing workstations from remote locations.</p>
+        <table>
+            <tr>
+                <th>Term</th>
+                <th>Definition</th>
+            </tr>
+            <tr>
+                <td>RDP (Remote Desktop Protocol)</td>
+                <td>A proprietary protocol developed by Microsoft for remote access to computers.</td>
+            </tr>
+            <tr>
+                <td>VPN (Virtual Private Network)</td>
+                <td>A service that allows access to a private network across public networks securely.</td>
+            </tr>
+            <tr>
+                <td>Firewall</td>
+                <td>A network security system that controls incoming and outgoing network traffic.</td>
+            </tr>
+        </table>
+
+        <h3 id="prerequisites">2. Prerequisites for Remote Desktop Setup</h3>
+        <ul>
+            <li>Ensure the computer to be accessed remotely is powered on and connected to the internet.</li>
+            <li>Obtain the IP address of the remote computer.</li>
+            <li>Ensure that the necessary remote desktop software is installed and enabled on both the host and client devices.</li>
+            <li>Check that remote desktop connections are allowed through the firewall.</li>
+            <li>Verify user account permissions for remote access.</li>
+        </ul>
+
+        <h3 id="setup-windows-remote-desktop">3. Setting Up Windows Remote Desktop</h3>
+        <p>Follow these steps to set up Windows Remote Desktop:</p>
+        <ol>
+            <li>Open the Start Menu and search for <strong>Remote Desktop Settings</strong>.</li>
+            <li>Enable the option labeled <strong>Enable Remote Desktop</strong>.</li>
+            <li>Under the <strong>Remote Desktop</strong> settings, click on <strong>Show settings</strong> to configure the firewall.</li>
+            <li>Ensure that the option <strong>Allow remote connections to this computer</strong> is checked.</li>
+            <li>Make a note of the computer name or IP address that will be used to connect remotely.</li>
+            <li>On the client computer, search for <strong>Remote Desktop Connection</strong> in the Start Menu.</li>
+            <li>Enter the computer name or IP address of the remote computer and click <strong>Connect</strong>.</li>
+            <li>Log in with the user credentials of the remote computer.</li>
+        </ol>
+
+        <p class="note">Note: Ensure the remote computer is not set to sleep or hibernate, as this will disrupt the remote connection.</p>
+
+        <h3 id="setup-mac-remote-desktop">4. Setting Up Mac Remote Desktop</h3>
+        <p>Follow these steps to set up Mac Remote Desktop:</p>
+        <ol>
+            <li>Open the <strong>System Preferences</strong> and go to <strong>Sharing</strong>.</li>
+            <li>Enable the option <strong>Remote Management</strong> or <strong>Screen Sharing</strong>.</li>
+            <li>Decide which users can access the Mac remotely by configuring the settings under <strong>Allow access for:</strong></li>
+            <li>To connect to the Mac from another Mac, open the <strong>Finder</strong> and select <strong>Go > Connect to Server</strong>. Enter the VNC server address (e.g., vnc://IP_address) and click <strong>Connect</strong>.</li>
+            <li>For remote access from a Windows PC, download and install <strong>Microsoft Remote Desktop</strong> from the App Store or a trusted source.</li>
+        </ol>
+
+        <h3 id="troubleshooting-common-issues">5. Troubleshooting Common Issues</h3>
+        <p>If you or a customer encounter any problems during the setup, refer to the following troubleshooting steps:</p>
+        <ul>
+            <li><strong>Unable to Connect:</strong> Verify that the remote computer's IP address or hostname is correct, and ensure that it is connected to the internet.</li>
+            <li><strong>Firewall Blocking Connections:</strong> Make sure the firewall is configured to allow remote desktop connections. Add exceptions for RDP port 3389 (Windows) and VNC ports (Mac).</li>
+            <li><strong>Incorrect Credentials:</strong> Confirm that the user is entering the correct username and password for the remote computer.</li>
+            <li><strong>Network Issues:</strong> Ensure that there are no issues with the customer's network connection. A restart of the router might help resolve some connectivity problems.</li>
+            <li><strong>Software Conflicts:</strong> Ensure there are no software conflicts, such as other remote desktop software interfering with the connection.</li>
+        </ul>
+
+        <h3 id="security-tips">6. Security Tips</h3>
+        <p>Ensuring a secure remote desktop connection is crucial. Here are some tips:</p>
+        <ul>
+            <li>Use strong and unique passwords for remote access accounts.</li>
+            <li>Enable two-factor authentication for an added layer of security.</li>
+            <li>Use a VPN to establish a secure connection.</li>
+            <li>Regularly update your operating system and remote desktop software to patch any security vulnerabilities.</li>
+            <li>Audit and review remote access logs for any unauthorized access attempts.</li>
+        </ul>
+
+        <h3 id="additional-resources">7. Additional Resources</h3>
+        <p>For further assistance, refer customers to the following resources:</p>
+        <ul>
+            <li><a href="https://www.microsoft.com/en-us/windows/remote-desktop" target="_blank">Microsoft Windows Remote Desktop Guide</a></li>
+            <li><a href="https://support.apple.com/guide/mac-help/remote-management-mchl7d9ff2b4/mac" target="_blank">Apple Remote Management Guide</a></li>
+            <li><a href="https://www.quickconnect.com/support" target="_blank">QuickConnect Support Portal</a></li>
+        </ul>
+
+        <p class="important">Reminder: Always follow company policies and ensure customer data privacy when providing remote desktop support.</p>
+    </div

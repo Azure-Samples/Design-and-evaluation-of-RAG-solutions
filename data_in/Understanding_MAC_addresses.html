@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding MAC Addresses</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #333;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        ul, ol {
+            margin: 20px 0;
+        }
+        .content-box {
+            background: #ffffff;
+            border: 1px solid #cccccc;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Understanding MAC Addresses</h1>
+
+    <div class="content-box">
+        <p>A Media Access Control (MAC) address is a unique identifier assigned to network interfaces for communications on the physical network segment. Understanding MAC addresses is crucial for network management, troubleshooting, and ensuring security in a telecommunications environment. This document aims to provide a comprehensive overview of MAC addresses and how they can be used in customer support at QuickConnect.</p>
+
+        <h2>What is a MAC Address?</h2>
+
+        <p>A MAC address is a 48-bit address that is typically represented as 12 hexadecimal digits. These addresses are used to identify devices on a network and ensure that data packets reach their intended destination. Here is an example of a MAC address:</p>
+
+        <ul>
+            <li><strong>Example MAC Address:</strong> 00:1A:2B:3C:4D:5E</li>
+        </ul>
+
+        <h2>Structure of a MAC Address</h2>
+
+        <p>MAC addresses are composed of two main parts:</p>
+        
+        <ol>
+            <li><strong>Organizationally Unique Identifier (OUI)</strong>: The first 24 bits (or 6 hexadecimal digits) represent the OUI. This part of the MAC address is assigned by the IEEE to the manufacturer of the network device.</li>
+            <li><strong>Network Interface Controller (NIC) Specific</strong>: The remaining 24 bits (or 6 hexadecimal digits) are specific to the device. This part of the MAC address is determined by the manufacturer.</li>
+        </ol>
+
+        <p>Below is a table illustrating the structure of a MAC address:</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Bits</th>
+                    <th>Hexadecimal Digits</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>24</td>
+                    <td>00:1A:2B</td>
+                    <td>Organizationally Unique Identifier (OUI) - Assigned by IEEE</td>
+                </tr>
+                <tr>
+                    <td>24</td>
+                    <td>3C:4D:5E</td>
+                    <td>Network Interface Controller (NIC) Specific - Assigned by Manufacturer</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>How MAC Addresses Are Used</h2>
+
+        <h3>Network Communication</h3>
+        
+        <p>MAC addresses play a vital role in local network communication. When a device wants to communicate with another device on the same network, it will use the MAC address to ensure the data is sent to the correct destination. The process of mapping IP addresses to MAC addresses is handled by the Address Resolution Protocol (ARP).</p>
+
+        <h3>Device Identification</h3>
+        
+        <p>Each MAC address is unique to the network interface it is assigned to. This uniqueness allows network administrators to identify and monitor devices on the network. In the context of QuickConnect, this can help customer service agents identify customer devices and troubleshoot connectivity issues.</p>
+
+        <h3>Network Security</h3>
+        
+        <p>MAC addresses can also play a role in network security through MAC address filtering. This technique allows network administrators to specify which devices are allowed to connect to the network. Any device with an unrecognized MAC address will be denied access. This method of securing the network can help prevent unauthorized access and potential security breaches.</p>
+
+        <h2>Common Customer Inquiries About MAC Addresses</h2>
+        
+        <p>Customers at QuickConnect may have several questions about MAC addresses. Here are some of the most common inquiries and how to address them:</p>
+
+        <h3>Where Can I Find My Device's MAC Address?</h3>
+        
+        <p>Finding the MAC address depends on the device's operating system. Here are steps for different types of devices:</p>
+        
+        <h4>Windows</h4>
+        <ol>
+            <li>Open the Command Prompt by pressing <code>Win + R</code> and typing <code>cmd</code>.</li>
+            <li>Type <code>ipconfig /all</code> and press <code>Enter</code>.</li>
+            <li>Look for the "Physical Address" under the network adapter that is currently connected.</li>
+        </ol>
+
+        <h4>Mac</h4>
+        <ol>
+            <li>Click on the Apple menu and select <strong>System Preferences</strong>.</li>
+            <li>Click on <strong>Network</strong>.</li>
+            <li>Select the network connection you are using (e.g., Wi-Fi, Ethernet).</li>
+            <li>Click on <strong>Advanced</strong> and then go to the <strong>Hardware</strong> tab to find the MAC address.</li>
+        </ol>
+    
+        <h4>Android</h4>
+        <ol>
+            <li>Open the <strong>Settings</strong> app.</li>
+            <li>Select <strong>About Phone</strong> (or <strong>About Device</strong>).</li>
+            <li>Select <strong>Status</strong>.</li>
+            <li>Look for the "Wi-Fi MAC address" or "Device MAC address".</li>
+        </ol>
+
+        <h4>iOS</h4>
+        <ol>
+            <li>Open the <strong>Settings</strong> app.</li>
+            <li>Select <strong>General</strong>.</li>
+            <li>Tap on <strong>About</strong>.</li>
+            <li>Scroll down to find the "Wi-Fi Address".</li>
+        </ol>
+
+        <h3>Why is My MAC Address Important?</h3>
+        
+        <p>A customer may ask why their MAC address is significant. Here are some key points to emphasize:</p>
+        
+        <ul>
+            <li><strong>Device Identification:</strong> The MAC address uniquely identifies their device on the network, which is crucial for communication.</li>
+            <li><strong>Network Security:</strong> It helps in securing the network through methods such as MAC address filtering.</li>
+            <li><strong>Troubleshooting:</strong> Knowing the MAC address can assist QuickConnect agents in diagnosing and resolving network connectivity issues.</li>
+        </ul>
+        
+        <h3>Can I Change My MAC Address?</h3>
+        
+        <p>While MAC addresses are typically burned into the hardware, there are ways to spoof or change the MAC address using software. Here is how to do it:</p>
+        
+        <h4>Windows</h4>
+        <ol>
+            <li>Open the <strong>Device Manager</strong>.</li>
+            <li>Find the network adapter you wish to change, right-click, and select <strong>Properties</strong>.</li>
+            <li>Click on the <strong>Advanced</strong> tab and select <strong>Network Address</strong>.</li>
+            <li>Enter the new MAC address and click <strong>OK</strong>.</li>
+        </ol>
+
+        <h4>Mac</h4>
+        <ol>
+            <li>Open the <strong>Terminal</strong> application.</li>
+            <li>Type <code>sudo ifconfig en0 ether XX:XX:XX:XX:XX:XX</code> (replace <code>en0</code> with your network interface and <code>XX:XX:XX:XX:XX:XX</code> with your desired MAC address).</li>
+            <li>Press <code>Enter</code>.</li>
+        </ol>
+    
+        <h4>Linux</h4>
+        <ol>
+            <li>Open the <strong>Terminal</strong> application.</li>
+            <li>Type <code>sudo ifconfig eth0 hw ether XX:XX:XX:XX:XX:XX</code> (replace <code>eth0</code> with your network interface and <code>XX:XX:XX

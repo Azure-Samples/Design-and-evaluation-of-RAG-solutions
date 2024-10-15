@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickConnect Customer Service - Resolving IP Conflicts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 20px;
+        }
+        h1, h2, h3 {
+            color: #003366;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Resolving IP Conflicts</h1>
+    <p>IP conflicts occur when two devices on the same local network are assigned the same IP address. This can cause connectivity issues for one or both of the devices, leading to difficulties accessing network resources and the internet. This guide will help QuickConnect customer service agents address and resolve IP conflicts for our customers efficiently.</p>
+
+    <h2>Understanding IP Conflicts</h2>
+    <p>Before diving into the resolution steps, it's essential to understand the core issue. An IP conflict occurs under these circumstances:</p>
+    <ul>
+        <li>Two devices are assigned the same static IP address.</li>
+        <li>The DHCP server mistakenly assigns the same IP address to multiple devices.</li>
+        <li>A device is manually configured with an IP address that is within the DHCP server's range and is also assigned elsewhere dynamically.</li>
+    </ul>
+
+    <h2>Symptoms of an IP Conflict</h2>
+    <p>Customers might report various issues that could point to an IP conflict. Key symptoms include:</p>
+    <ul>
+        <li>Intermittent or complete loss of network connectivity.</li>
+        <li>Network connection errors, such as “IP address conflict” messages.</li>
+        <li>Unable to access the internet.</li>
+        <li>Slow network speeds on one or more devices.</li>
+    </ul>
+
+    <h2>Steps to Resolve IP Conflicts</h2>
+    <p>Follow these steps to diagnose and resolve an IP conflict:</p>
+
+    <h3>Step 1: Identify the Problematic Devices</h3>
+    <p>Check which devices are experiencing issues:</p>
+    <ol>
+        <li>Ask the customer to list all devices connected to the network (computers, smartphones, tablets, smart TVs, etc.).</li>
+        <li>Determine which devices are experiencing connectivity problems.</li>
+        <li>Check for error messages related to IP conflicts on these devices.</li>
+    </ol>
+
+    <h3>Step 2: Release and Renew IP Addresses</h3>
+    <p>Releasing and renewing IP addresses is a quick way to resolve many IP conflicts:</p>
+    <h4>For Windows:</h4>
+    <ol>
+        <li>Open Command Prompt as an administrator.</li>
+        <li>Type <code>ipconfig /release</code> and press Enter.</li>
+        <li>Wait a few moments, then type <code>ipconfig /renew</code> and press Enter.</li>
+        <li>Check if the issue is resolved.</li>
+    </ol>
+    <h4>For MacOS:</h4>
+    <ol>
+        <li>Go to the Apple menu and select <strong>System Preferences</strong>.</li>
+        <li>Click on <strong>Network</strong>.</li>
+        <li>Choose the active network connection and click on <strong>Advanced</strong>.</li>
+        <li>Go to the <strong>TCP/IP</strong> tab.</li>
+        <li>Click on <strong>Renew DHCP Lease</strong>.</li>
+        <li>Check if the issue is resolved.</li>
+    </ol>
+
+    <h3>Step 3: Ensure Unique Static IP Addresses</h3>
+    <p>If the customer is using static IP addresses, ensure each device has a unique IP:</p>
+    <ol>
+        <li>Check the current IP addresses of all network devices.</li>
+        <li>Assign a unique static IP to each device, ensuring no overlap.</li>
+        <li>Validate by ensuring one device is disconnected while assigning a new IP to avoid duplication.</li>
+        <li>For Wi-Fi routers: In the router's settings, set a specific IP range for static addresses outside the DHCP range.</li>
+    </ol>
+
+    <h3>Step 4: Adjust DHCP Settings on the Router</h3>
+    <p>Sometimes, misconfigurations in the router's DHCP settings can lead to IP conflicts:</p>
+    <ol>
+        <li>Log into the router's administrative interface.</li>
+        <li>Check the DHCP settings to ensure there's no overlap with the static IP range.</li>
+        <li>Adjust the DHCP IP address range if necessary.</li>
+        <li>Save and restart the router.</li>
+    </ol>
+
+    <h2>Troubleshooting Tips and Additional Information</h2>
+    <h3>Checking for Duplicate IP Addresses</h3>
+    <p>On customer's devices, follow these steps to check the current IP:</p>
+    <h4>For Windows:</h4>
+    <ol>
+        <li>Open Command Prompt.</li>
+        <li>Type <code>ipconfig</code> and press Enter.</li>
+        <li>Note down the "IPv4 Address" under the active network connection.</li>
+    </ol>
+
+    <h4>For MacOS:</h4>
+    <ol>
+        <li>Open <strong>System Preferences</strong>.</li>
+        <li>Click on <strong>Network</strong>.</li>
+        <li>Select the active network connection and note the IP address displayed.</li>
+    </ol>
+
+    <h3>Clearing the ARP Cache</h3>
+    <p>Clearing the ARP (Address Resolution Protocol) cache can sometimes resolve IP conflicts:</p>
+    <h4>For Windows:</h4>
+    <ol>
+        <li>Open Command Prompt as an administrator.</li>
+        <li>Type <code>arp -a</code> and press Enter to view current ARP cache.</li>
+        <li>Type <code>netsh interface ip delete arpcache</code> and press Enter.</li>
+    </ol>
+
+    <h4>For MacOS:</h4>
+    <ol>
+        <li>Open Terminal.</li>
+        <li>Type <code>sudo arp -d -a</code> and press Enter.</li>
+        <li>You may be prompted to enter the administrator password.</li>
+    </ol>
+
+    <h3>Assigning a Static IP Address</h3>
+    <p>If assigning static IPs, ensure they are outside the DHCP range:</p>
+    <h4>For Windows:</h4>
+    <ol>
+        <li>Open Control Panel and go to <strong>Network and Sharing Center</strong>.</li>
+        <li>Click on <strong>Change adapter settings</strong>.</li>
+        <li>Right-click the network connection and select <strong>Properties</strong>.</li>
+        <li>Select <strong>Internet Protocol Version 4 (TCP/IPv4)</strong> and click <strong>Properties</strong>.</li>
+        <li>Select <strong>Use the following IP address</strong> and enter a unique IP, Subnet mask, and Default gateway.</li>
+        <li>Click <strong>OK</strong> and restart the device.</li>
+    </ol>
+
+    <h4>For MacOS:</h4>
+    <ol>
+        <li>Open <strong>System Preferences</strong> and go to <strong>Network</strong>.</li>
+        <li>Select the active network connection and click <strong>Advanced</strong>.</li>
+        <li>Go to the <strong>TCP/IP</strong> tab.</li>
+        <li>Select <strong>Manually</strong> from the Configure IPv4 drop-down menu.</li>
+        <li>Enter a unique IP Address, Subnet Mask, and Router (Default Gateway).</li>
+        <li>Click <strong>OK</strong> and then <strong>Apply</strong>.</li>
+    </ol>
+
+    <h2>Document any Issues and Solutions</h2>
+    <p>Ensure that you document any issues and the steps taken to resolve them. This can help in future troubleshooting and provide a reference for similar cases:</p>
+    <ul>
+        <li>Record the initial issue reported by the customer.</li>
+        <li

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Service Guide - Dynamic DNS Configurations</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 40px;
+            background-color: #f4f4f4;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        .section {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table th, table td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        table th {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Supporting Customers with Dynamic DNS Configurations</h1>
+
+    <div class="section">
+        <h2>1. Introduction to Dynamic DNS</h2>
+        <p>Dynamic DNS (DDNS) is a service that maps internet domain names to IP addresses, and it automatically updates the name-server in real time as the IP address of a device changes. This is particularly useful for users who have devices with changing (dynamic) IP addresses but wish to maintain a constant domain name.</p>
+    </div>
+
+    <div class="section">
+        <h2>2. Common Scenarios for Using Dynamic DNS</h2>
+        <ul>
+            <li>Hosting a server at home, such as a web server, game server, or media server.</li>
+            <li>Remote access to home automation devices like cameras, thermostats, or light bulbs.</li>
+            <li>Using VoIP services on a dynamic IP address.</li>
+            <li>Any situation requiring consistent remote access to a device with a changing IP address.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>3. Pre-requisites for Setting Up Dynamic DNS</h2>
+        <ul>
+            <li>A registered domain name.</li>
+            <li>An account with a DDNS service provider.</li>
+            <li>A device or network router that supports DDNS.</li>
+            <li>Basic understanding of networking concepts.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>4. Steps to Configure Dynamic DNS</h2>
+
+        <h3>4.1 Selecting a DDNS Service Provider</h3>
+        <p>There are several DDNS service providers available. Some popular ones include:</p>
+        <table>
+            <tr>
+                <th>Provider</th>
+                <th>Features</th>
+                <th>Pricing</th>
+            </tr>
+            <tr>
+                <td>No-IP</td>
+                <td>Free tier available, multiple hostname options, Email support</td>
+                <td>Free / Premium plans start at $24.95/year</td>
+            </tr>
+            <tr>
+                <td>DynDNS</td>
+                <td>Wide range of DNS services, strong security features, API access</td>
+                <td>Starts at $55.00/year for advanced plans</td>
+            </tr>
+            <tr>
+                <td>DuckDNS</td>
+                <td>Free, uses Let's Encrypt for secure certificates, supports scripts</td>
+                <td>Free, donations accepted</td>
+            </tr>
+            <tr>
+                <td>Cloudflare</td>
+                <td>Free DDNS with additional DDoS protection, global CDN options</td>
+                <td>Free to use; additional services may cost</td>
+            </tr>
+        </table>
+
+        <h3>4.2 Setting Up an Account with a Provider</h3>
+        <ol>
+            <li>Visit the website of the chosen DDNS provider.</li>
+            <li>Sign up and create an account.</li>
+            <li>Verify your email address if required.</li>
+            <li>Log in to access the dashboard.</li>
+        </ol>
+        
+        <h3>4.3 Configuring the Device or Router</h3>
+        <ol>
+            <li>Locate the DDNS settings on your device or router. This is usually found under the “Network” or “Advanced” settings menu.</li>
+            <li>Select your DDNS service provider from the list of supported options.</li>
+            <li>Enter the username (or email) and password associated with your DDNS account.</li>
+            <li>Enter your domain name or hostname. This will be the URL that you use to access your device.</li>
+            <li>Save the settings and restart your device or router if prompted.</li>
+        </ol>
+    
+        <h3>4.4 Verifying the Configuration</h3>
+        <ul>
+            <li>To confirm your DDNS is working, open a web browser and type in your domain name or hostname. It should direct you to your device.</li>
+            <li>You can also use online tools like "ping" or "traceroute" to verify the IP address resolution of your domain name.</li>
+            <li>Check the DDNS provider dashboard to ensure the IP address is correctly updated.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>5. Troubleshooting Common Issues</h2>
+        
+        <h3>5.1 Common Issues</h3>
+        <ul>
+            <li>Incorrect login credentials.</li>
+            <li>Unsupported router or device.</li>
+            <li>IP address is not updating.</li>
+            <li>Firewall or security software blocking the DDNS update client.</li>
+        </ul>
+
+        <h3>5.2 Solutions</h3>
+        <table>
+            <tr>
+                <th>Issue</th>
+                <th>Solution</th>
+            </tr>
+            <tr>
+                <td>Incorrect login credentials</td>
+                <td>Double-check your username/email and password. Try resetting the password through the service provider's website if needed.</td>
+            </tr>
+            <tr>
+                <td>Unsupported router or device</td>
+                <td>Verify if your router or device supports DDNS. If not, consider updating your firmware or using a supported device.</td>
+            </tr>
+            <tr>
+                <td>IP address not updating</td>
+                <td>Check your settings and ensure the DDNS client is running on your device. Verify your internet connection and router configuration.</td>
+            </tr>
+            <tr>
+                <td>Firewall or security software blocking DDNS</td>
+                <td>Configure your firewall or security software to allow the DDNS update client to communicate over the internet.</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>6. Additional Resources</h2>
+        <ul>
+            <li><a href="https://www.noip.com/support">No-IP Support</a> - User guides, FAQs and customer support for No-IP users.</li>
+            <li><a href="https://help.dyn.com/">DynDNS Help Portal</a> - Comprehensive support for DynDNS customers.</li>
+            <li><a href="https://www.duckdns.org/faq.jsp">DuckDNS FAQ</a> - Frequently asked questions and user support for DuckDNS.</li>
+            <li><a href="https://support.cloudflare.com/">Cloudflare Support</a> - Detailed articles and community support for Cloudflare services.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>7. Contacting Customer Support</h2>
+        <p>If the customer continues to experience issues after following these instructions, advise them to contact QuickConnect Customer Support for further assistance. Ensure you collect the necessary details such as their account information, the device they are using, and any error messages they are encountering.</p>
+        <p>Provide them with the following contact options:</p>
+        <ul>
+            <li><strong>Phone:</strong> 1-800-123-4567 (Available 24/7)</li>
+            <li><strong>Email:</strong> support@quickconnect.com</li>
+            <li><strong>Live Chat:</strong> Available on the QuickConnect website.</li>
+        </ul>
+    </div>
+
+</body>
+</html>

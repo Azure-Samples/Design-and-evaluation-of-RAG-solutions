@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Service Guide: Assisting with Router Configuration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f3f4f6;
+            color: #333;
+        }
+        header {
+            background-color: #0073e6;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+        }
+        section {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3, h4 {
+            color: #0073e6;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            text-align: left;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+        th {
+            background-color: #f0f0f0;
+        }
+        ul {
+            margin: 10px 0;
+            padding: 0 20px;
+            list-style: disc;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>QuickConnect Customer Service Guide</h1>
+    <h2>Assisting with Router Configuration</h2>
+</header>
+
+<section>
+    <h2>Introduction</h2>
+    <p>
+        This guide provides detailed steps for customer service agents at QuickConnect on how to assist customers with router configuration. Properly configured routers ensure customers have a stable internet connection, which is essential for their online activities. This guide includes common troubleshooting steps, essential terms, and a step-by-step process for configuring routers.
+    </p>
+</section>
+
+<section>
+    <h2>Basic Terminology</h2>
+    <p>Understanding basic networking terms is essential for assisting customers with router configuration. Here are some key terms:</p>
+    <table>
+        <tr>
+            <th>Term</th>
+            <th>Definition</th>
+        </tr>
+        <tr>
+            <td>Router</td>
+            <td>A device that forwards data packets between computer networks, creating an overlay network.</td>
+        </tr>
+        <tr>
+            <td>IP Address</td>
+            <td>A unique string of numbers separated by periods that identifies each computer using the Internet Protocol to communicate over a network.</td>
+        </tr>
+        <tr>
+            <td>SSID</td>
+            <td>Service Set Identifier - the name of a wireless network.</td>
+        </tr>
+        <tr>
+            <td>WPA/WPA2</td>
+            <td>Wi-Fi Protected Access versions 1 and 2, which are security protocols to protect wireless networks.</td>
+        </tr>
+        <tr>
+            <td>LAN</td>
+            <td>Local Area Network - a network that connects computers within a limited area such as a residence or school.</td>
+        </tr>
+        <tr>
+            <td>DHCP</td>
+            <td>Dynamic Host Configuration Protocol - a network management protocol used to automate the process of configuring devices on IP networks.</td>
+        </tr>
+    </table>
+</section>
+
+<section>
+    <h2>Step-by-Step Router Configuration</h2>
+    <h3>1. Initial Setup</h3>
+    <p>Before configuring a router, ensure you have the necessary items:</p>
+    <ul>
+        <li>Router</li>
+        <li>Power Adapter</li>
+        <li>Ethernet Cables</li>
+        <li>Computer or Mobile Device</li>
+        <li>QuickConnect Account Information</li>
+    </ul>
+    <h3>2. Connecting the Hardware</h3>
+    <ol>
+        <li>Connect the power adapter to the router and plug it into an electrical outlet.</li>
+        <li>Use an Ethernet cable to connect the modem to the WAN/Internet port on the router.</li>
+        <li>Connect another Ethernet cable from one of the LAN ports on the router to your computer.</li>
+    </ol>
+    <h3>3. Accessing the Router Interface</h3>
+    <ol>
+        <li>Ensure your computer is connected to the router via Ethernet or Wi-Fi.</li>
+        <li>Open a web browser and type in the router’s IP address (usually <code>192.168.1.1</code> or <code>192.168.0.1</code>) in the address bar.</li>
+        <li>Enter the default username and password to log in. These are often found on a sticker on the router or in the user manual.</li>
+    </ol>
+    <h3>4. Configuring Basic Settings</h3>
+    <p>Once logged into the router interface, configure the following settings:</p>
+    <ul>
+        <li><strong>Change Default Administrator Credentials:</strong> For security, change the default username and password.</li>
+        <li><strong>Set the Wi-Fi SSID:</strong> Change the wireless network name to something unique and easily recognizable.</li>
+        <li><strong>Configure Wi-Fi Security:</strong> Set the Wi-Fi security to WPA2 and create a strong password.</li>
+    </ul>
+    <h3>5. Configure the WAN/Internet Connection</h3>
+    <p>The WAN/Internet settings are crucial for accessing the internet:</p>
+    <ol>
+        <li>Select the type of Internet connection your ISP uses (usually DHCP, Static IP, or PPPoE).</li>
+        <li>If using DHCP, the router will automatically obtain an IP address.</li>
+        <li>For Static IP, enter the IP address, Subnet Mask, Gateway, and DNS addresses provided by the ISP.</li>
+        <li>If using PPPoE, enter the username and password provided by QuickConnect.</li>
+    </ol>
+    <h3>6. Setting Up DHCP</h3>
+    <p>Enable the DHCP server on the router so that it assigns IP addresses to devices on the network:</p>
+    <ul>
+        <li>Navigate to the DHCP settings in the router interface.</li>
+        <li>Enable the DHCP server mode.</li>
+        <li>Specify the IP address range that the router will use to assign to devices.</li>
+    </ul>
+    <h3>7. Port Forwarding</h3>
+    <p>Port forwarding allows external devices to access services on a local network:</p>
+    <ul>
+        <li>Identify the internal IP address of the device to which you want to forward ports.</li>
+        <li>Navigate to the port forwarding section of the router interface.</li>
+        <li>Enter the service name, external port, internal IP address, and internal port.</li>
+    </ul>
+    <h3>8. Updating Router Firmware</h3>
+    <p>It is important to keep the router firmware up-to-date for new features and security patches:</p>
+    <ul>
+        <li>Check the router manufacturer's website for the latest firmware version.</li>
+        <li>In the router interface, navigate to the firmware update section.</li>
+        <li>Download and install the latest firmware version as per the provided instructions.</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Troubleshooting Common Issues</h2>
+    <h3>1. No Internet Connection</h3>
+    <ul>
+        <li>Ensure all cables are properly connected.</li>
+        <li>Restart the router and modem.</li>
+        <li>Check if the internet service is active with ISP.</li>
+        <li>Verify WAN settings in the router interface.</li>
+    </ul>
+    <h3>2. Unable to Access Router Interface</h3>
+    <ul>
+        <li>Ensure the device is connected to the router.</li>
+        <li>Use the correct IP address (check the router’s manual).</li>
+        <li>Try accessing the interface using a different web browser.</li>
+    </ul>
+    <h3>3. Poor Wi-Fi Signal</h3>
+    <ul>
+        <li>Reposition the router to a central location.</li>
+        <li>Avoid placing the router near thick walls or metal objects.</li>
+        <li>Change the Wi-Fi channel to one with less interference.</li>
+    </ul>
+    <h3>4. Forgotten Wi-Fi Password</h3>
+    <ul>
+        <li>Access the router interface using Ethernet and change the Wi-Fi password.</li>
+        <li>If unable to access, perform a factory reset of the router and reconfigure it.</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Additional Resources</h2>
+    <p>For more detailed information and advanced troubleshooting, refer to the following resources:</p>
+    <ul>
+        <

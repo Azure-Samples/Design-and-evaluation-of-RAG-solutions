@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickConnect Customer Service Guide: Split Tunneling for VPNs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px #ccc;
+        }
+        .info-box {
+            padding: 10px;
+            background-color: #e7f3fe;
+            border-left: 5px solid #2196F3;
+        }
+        .warning-box {
+            padding: 10px;
+            background-color: #ffebee;
+            border-left: 5px solid #f44336;
+        }
+        .note {
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Understanding Split Tunneling for VPNs</h1>
+
+    <p>
+        Welcome to the QuickConnect customer service guide on split tunneling for VPNs. This document aims to provide you with detailed information to help customers understand what split tunneling is, its benefits, its drawbacks, and how it can be configured. By the end of this guide, you should be able to confidently address customer inquiries about split tunneling and provide appropriate guidance.
+    </p>
+
+    <h2>What is Split Tunneling?</h2>
+    <p>
+        Split tunneling is a feature of Virtual Private Networks (VPNs) that allows users to route some of their device or application traffic through the encrypted VPN tunnel while the rest of the traffic is sent directly over the internet. This contrasts with full tunneling, where all traffic is routed through the VPN tunnel.
+    </p>
+
+    <div class="info-box">
+        <strong>Quick Fact:</strong> Split tunneling is useful for balancing the need for security and performance, especially when using bandwidth-intensive applications.
+    </div>
+
+    <h3>How Split Tunneling Works</h3>
+    <p>
+        When split tunneling is enabled, the VPN client makes decisions based on predefined rules or configurations to determine which traffic should go through the VPN and which should bypass it. These rules can be set based on destination IP addresses, domains, or even applications.
+    </p>
+
+    <h3>Types of Split Tunneling</h3>
+    <p>There are three common types of split tunneling:</p>
+    <ul>
+        <li><strong>IP-based Split Tunneling:</strong> Routes specific IP addresses through the VPN and allows others to bypass it.</li>
+        <li><strong>Domain-based Split Tunneling:</strong> Routes traffic to certain domains through the VPN while bypassing others.</li>
+        <li><strong>Application-based Split Tunneling:</strong> Routes traffic from specific applications through the VPN and allows other applications to bypass it.</li>
+    </ul>
+
+    <h3>Benefits of Split Tunneling</h3>
+    <ul>
+        <li><strong>Improved Performance:</strong> By allowing non-sensitive traffic to bypass the VPN, it reduces the load and can enhance connection speed.</li>
+        <li><strong>Lower Bandwidth Usage:</strong> Reduces the amount of data transmitted through the VPN, thus saving bandwidth.</li>
+        <li><strong>Direct Access to Local Resources:</strong> Users can access local devices like printers or file servers without disconnecting from the VPN.</li>
+    </ul>
+
+    <h3>Drawbacks of Split Tunneling</h3>
+    <div class="warning-box">
+        Split tunneling has its drawbacks that users should be aware of:
+    </div>
+    <ul>
+        <li><strong>Security Risks:</strong> Non-VPN traffic is not encrypted, making it vulnerable to interception and attacks.</li>
+        <li><strong>Complex Configuration:</strong> Setting up split tunneling requires adequate knowledge and can be prone to misconfiguration.</li>
+        <li><strong>Potential for Data Leaks:</strong> Sensitive data may inadvertently travel outside the secure tunnel if the split tunneling rules are not appropriately configured.</li>
+    </ul>
+
+    <h2>Configuring Split Tunneling</h2>
+    <p>
+        Configuring split tunneling typically involves setting up rules in the VPN client software. Here’s a general guide that you can provide to customers:
+    </p>
+    <ol>
+        <li><strong>Open the VPN Client:</strong> Launch the VPN application provided by QuickConnect.</li>
+        <li><strong>Access Settings:</strong> Navigate to the settings or options menu within the VPN client.</li>
+        <li><strong>Find Split Tunneling:</strong> Look for an option labeled "Split Tunneling," "Advanced Routing," or similar.</li>
+        <li><strong>Configure Rules:</strong> Define which traffic should go through the VPN by setting rules based on IP addresses, domains, or applications.</li>
+        <li><strong>Save and Apply:</strong> Save the configuration and apply the changes.</li>
+    </ol>
+
+    <div class="info-box note">
+        <p>Note: The steps and terminologies might vary based on the VPN client software. Encourage customers to refer to the user manual or QuickConnect’s support documentation for specific instructions.</p>
+    </div>
+
+    <h3>Troubleshooting Split Tunneling Issues</h3>
+    <p>
+        Customers may encounter issues while setting up or using split tunneling. Here are some common problems and solutions:
+    </p>
+    <table>
+        <tr>
+            <th>Issue</th>
+            <th>Solution</th>
+        </tr>
+        <tr>
+            <td><strong>Traffic Not Routing Through VPN</strong></td>
+            <td>Ensure the split tunneling rules are correctly configured and applied. Verify that the VPN client is connected and functioning properly.</td>
+        </tr>
+        <tr>
+            <td><strong>Decreased Performance</strong></td>
+            <td>Check the configuration to ensure only necessary traffic is routed through the VPN. Close unnecessary applications to free up resources.</td>
+        </tr>
+        <tr>
+            <td><strong>Inability to Access Local Devices</strong></td>
+            <td>Double-check if the local network IP addresses are excluded from the VPN tunnel in the split tunneling configuration.</td>
+        </tr>
+    </table>
+
+    <h2>Security Considerations</h2>
+    <p>
+        When discussing split tunneling with customers, it's crucial to highlight the security implications. Here are some key points to cover:
+    </p>
+    <ul>
+        <li>Emphasize that traffic not routed through the VPN is not encrypted and can be exposed to security risks.</li>
+        <li>Encourage customers to use strong passwords and enable two-factor authentication (2FA) for additional security.</li>
+        <li>Recommend regular updates of the VPN client software to ensure it has the latest security patches.</li>
+    </ul>
+
+    <h3>Best Practices</h3>
+    <p>To ensure a secure and optimized usage of split tunneling, customers should follow these best practices:</p>
+    <ul>
+        <li><strong>Limit Split Tunneling to Essential Traffic:</strong> Only allow critical traffic to bypass the VPN to minimize security risks.</li>
+        <li><strong>Regularly Update VPN Software:</strong> Ensure the VPN client is up-to-date to benefit from the latest security features and improvements.</li>
+        <li><strong>Monitor Network Traffic:</strong> Use network monitoring tools to keep an eye on unusual activities and address potential threats promptly.</li>
+    </ul>
+
+    <h3>Common Scenarios for Split Tunneling Usage</h3>
+    <p>
+        Customers might ask when it is appropriate or beneficial to use split tunneling. Here are some scenarios to illustrate its practical use:
+    </p>
+    <ul>
+        <li><strong>Remote Work:</strong> Employees working from home may use split tunneling to access internal corporate resources securely while allowing personal internet usage to bypass the VPN.</li>
+        <li><strong>Bandwidth-Intensive Applications:</strong> Applications like streaming services or gaming that require high bandwidth can bypass the VPN to ensure optimal performance.</li>
+        <li><strong>Accessing Local Network Devices:</strong> Users can simultaneously access local resources (printers or file servers) and online services without needing to disconnect from the VPN.</li>
+    </ul>
+
+    <h2>Frequently Asked Questions (FAQs)</h2>
+    <p>Here are some common questions customers might have about split tunneling:</p>
+    <ul>
+       

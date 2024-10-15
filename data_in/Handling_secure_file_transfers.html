@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickConnect: Handling Secure File Transfers</title>
+    <style>
+        body {font-family: Arial, sans-serif; margin: 20px; line-height: 1.6;}
+        h1 {color: #4CAF50;}
+        table {width: 100%; border-collapse: collapse; margin: 20px 0;}
+        table, th, td {border: 1px solid #ddd; padding: 8px;}
+        th {background-color: #f2f2f2; text-align: left;}
+        .container {max-width: 800px; margin: 0 auto;}
+        .code {background-color: #f9f9f9; border-left: 3px solid #4CAF50; padding: 10px;}
+        .highlight {color: #4CAF50; font-weight: bold;}
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Handling Secure File Transfers</h1>
+    <p>Welcome to the QuickConnect Customer Service Guide on Handling Secure File Transfers. This document is designed to assist customer service agents in understanding the best practices, tools, and protocols involved in secure file transfers to support customers effectively.</p>
+
+    <h2>Understanding Secure File Transfers</h2>
+    <p>Secure file transfer involves the encryption and secure routing of data files between parties to ensure that the data remains confidential, integral, and authenticated throughout the transfer. There are several protocols and methods available for secure file transfers, each offering varying levels of security features.</p>
+
+    <h2>Encryption Methods</h2>
+    <p>Encryption is the cornerstone of secure file transfers. Here are the primary methods of encryption used in secure file transfers:</p>
+    <ul>
+        <li><span class="highlight">Symmetric Encryption:</span> Utilizes the same key for both encryption and decryption. Examples include AES (Advanced Encryption Standard).</li>
+        <li><span class="highlight">Asymmetric Encryption:</span> Uses a pair of keys (public and private). RSA (Rivest–Shamir–Adleman) is a common example.</li>
+        <li><span class="highlight">Hybrid Encryption:</span> Combines both symmetric and asymmetric encryption to leverage the strengths of both.</li>
+    </ul>
+
+    <h2>Common Protocols for Secure File Transfers</h2>
+    <p>Several protocols are widely used for secure file transfers. Understanding these protocols will help you assist customers better:</p>
+    <table>
+        <tr>
+            <th>Protocol</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td><span class="highlight">SFTP (Secure File Transfer Protocol)</span></td>
+            <td>SFTP uses SSH (Secure Shell) to provide a secure channel over an unsecured network. It encrypts both the command and the data, preventing passwords and sensitive information from being transmitted in clear text.</td>
+        </tr>
+        <tr>
+            <td><span class="highlight">FTPS (FTP Secure)</span></td>
+            <td>FTPS extends standard FTP by adding support for encryption protocols like SSL (Secure Sockets Layer) and TLS (Transport Layer Security). This adds security to the file transfer, ensuring data confidentiality and integrity.</td>
+        </tr>
+        <tr>
+            <td><span class="highlight">HTTPS (HTTP Secure)</span></td>
+            <td>HTTPS secures HTTP transactions by encrypting the data exchanged between the client and server using SSL/TLS. It's commonly used for web-based file transfers.</td>
+        </tr>
+        <tr>
+            <td><span class="highlight">AS2 (Applicability Statement 2)</span></td>
+            <td>AS2 allows the secure and reliable exchange of data over the internet using HTTPS. It's often used in business-to-business (B2B) communication.</td>
+        </tr>
+    </table>
+
+    <h2>Best Practices for Secure File Transfers</h2>
+    <p>Following best practices ensures the integrity and confidentiality of file transfers. Here's a list of key practices:</p>
+    <ul>
+        <li><span class="highlight">Use Strong Authentication:</span> Implement multi-factor authentication (MFA) to add an extra layer of security.</li>
+        <li><span class="highlight">Regularly Update Software:</span> Ensure that all software involved in the file transfer process is up-to-date to protect against vulnerabilities.</li>
+        <li><span class="highlight">Encrypt Data:</span> Always encrypt files before transferring them and use secure protocols for the transfer.</li>
+        <li><span class="highlight">Monitor Transfers:</span> Use monitoring tools to track and log file transfers. This helps in identifying and responding to any anomalies.</li>
+        <li><span class="highlight">Limit Access:</span> Only allow authorized personnel to access the file transfer system.</li>
+        <li><span class="highlight">Implement Data Integrity Checks:</span> Use checksums or hash functions to verify that the data has not been tampered with during transit.</li>
+        <li><span class="highlight">Educate Users:</span> Provide training and awareness programs on secure file transfer practices and the importance of data security.</li>
+    </ul>
+
+    <h2>Common Customer Issues and Solutions</h2>
+    <p>Below are some common issues customers may face during secure file transfers and their solutions:</p>
+    <table>
+        <tr>
+            <th>Issue</th>
+            <th>Solution</th>
+        </tr>
+        <tr>
+            <td>Encryption Key Mismanagement</td>
+            <td>Ensure proper storage and management of encryption keys. Advise customers to use a reputable key management system (KMS).</td>
+        </tr>
+        <tr>
+            <td>Failed Transfers</td>
+            <td>Check network connectivity, ensure the server is online, and verify that the user has the necessary permissions. Consider retrying the transfer.</td>
+        </tr>
+        <tr>
+            <td>Unsupported Protocols</td>
+            <td>Ensure the chosen protocol is supported by both the sender and receiver. Upgrade software if necessary to support newer protocols.</td>
+        </tr>
+        <tr>
+            <td>File Corruption</td>
+            <td>Use data integrity checks to detect corruption. Advise re-uploading the file if corruption is detected.</td>
+        </tr>
+        <tr>
+            <td>Password Issues</td>
+            <td>Reset passwords if forgotten. Educate clients on using strong, unique passwords and storing them securely.</td>
+        </tr>
+    </table>
+
+    <h2>Tools for Secure File Transfers</h2>
+    <p>Here are some recommended tools for secure file transfers:</p>
+    <ul>
+        <li><span class="highlight">WinSCP</span> - A popular open-source SFTP and FTP client for Windows. It offers secure file transfer functionality with a graphical user interface.</li>
+        <li><span class="highlight">FileZilla</span> - A free and open-source FTP application that supports SFTP and FTPS. It’s widely used for secure file transfers.</li>
+        <li><span class="highlight">Cyberduck</span> - A libre server and cloud storage browser for Mac and Windows with support for FTP, SFTP, WebDAV, Amazon S3, and OpenStack Swift.</li>
+        <li><span class="highlight">OpenSSH</span> - Provides tools for encryption and secure tunneling, widely used in UNIX-based systems for secure file transfers.</li>
+        <li><span class="highlight">Aspera</span> - A high-speed file transfer software that can handle large files with built-in security features.</li>
+    </ul>
+
+    <h2>How to Use SFTP for Secure File Transfer</h2>
+    <p>Secure File Transfer Protocol (SFTP) can be used to safely transfer files over SSH. Follow these steps:</p>
+    <ol>
+        <li><span class="highlight">Install an SFTP client:</span> Download and install an SFTP client such as WinSCP or FileZilla.</li>
+        <li><span class="highlight">Open the SFTP client:</span> Launch the installed SFTP client and locate the "New Site" option.</li>
+        <li><span class="highlight">Enter connection details:</span> Input the hostname, port (default is 22), and select SFTP as the protocol.</li>
+        <li><span class="highlight">Authenticate:</span> Enter your username and password. Some setups may require SSH keys for authentication.</li>
+        <li><span class="highlight">Setup connection:</span> Save the connection details and click "Connect" or "Login."</li>
+        <li><span class="highlight">Transfer files:</span> Drag and drop files to/from the remote server or use the interface to navigate and transfer files.</li>
+    </ol>
+
+    <h2>Troubleshooting Tips</h2>
+    <p>Sometimes issues arise during the file transfer process. Here are some troubleshooting tips:</p>
+    <ul>
+        <li><span class="highlight">Check Network Stability:</span

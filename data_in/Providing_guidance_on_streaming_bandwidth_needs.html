@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Streaming Bandwidth Requirements - QuickConnect</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #50b3a2;
+            color: #ffffff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #ffffff 3px solid;
+        }
+        header a {
+            color: #ffffff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header ul li {
+            display: inline;
+            padding: 0 20px;
+        }
+        h1 {
+            font-size: 24px;
+        }
+        h2 {
+            font-size: 20px;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            margin: 20px 0;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #50b3a2;
+            color: white;
+        }
+        .nav {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>QuickConnect Telecommunications</h1>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="nav">
+            <ul>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#basic-requirements">Basic Requirements</a></li>
+                <li><a href="#advanced-streaming">Advanced Streaming</a></li>
+                <li><a href="#devices">Number of Devices</a></li>
+                <li><a href="#troubleshooting">Troubleshooting</a></li>
+            </ul>
+        </div>
+        
+        <h2 id="overview">Overview</h2>
+        <p>In this document, we provide detailed guidance on the streaming bandwidth requirements for customers using QuickConnect services. Understanding these requirements is crucial for ensuring uninterrupted streaming experiences, whether it's for Netflix, Hulu, gaming, or any other online streaming need.</p>
+        
+        <h2 id="basic-requirements">Basic Streaming Bandwidth Requirements</h2>
+        <p>Streaming services require different amounts of internet bandwidth based on the quality of the stream. Here's a quick guide for the most popular streaming resolutions:</p>
+        
+        <table>
+            <tr>
+                <th>Resolution</th>
+                <th>Recommended Bandwidth</th>
+                <th>Service Examples</th>
+            </tr>
+            <tr>
+                <td>SD (Standard Definition)</td>
+                <td>3 Mbps (megabits per second)</td>
+                <td>Netflix, Hulu, YouTube</td>
+            </tr>
+            <tr>
+                <td>HD (High Definition) 720p</td>
+                <td>5 Mbps</td>
+                <td>Netflix, Hulu, Disney+</td>
+            </tr>
+            <tr>
+                <td>HD (High Definition) 1080p</td>
+                <td>10 Mbps</td>
+                <td>Netflix, Hulu, Amazon Prime</td>
+            </tr>
+            <tr>
+                <td>4K (Ultra High Definition)</td>
+                <td>25 Mbps</td>
+                <td>Netflix, Amazon Prime, Disney+</td>
+            </tr>
+        </table>
+        
+        <h2 id="advanced-streaming">Advanced Streaming Requirements</h2>
+        <p>For users who engage in more demanding streaming activities, such as live streaming or online gaming, the requirements can be different.</p>
+        
+        <table>
+            <tr>
+                <th>Activity</th>
+                <th>Recommended Bandwidth</th>
+                <th>Service Examples</th>
+            </tr>
+            <tr>
+                <td>Live Streaming (e.g. Twitch, YouTube Live)</td>
+                <td>3-6 Mbps (upstream)</td>
+                <td>Twitch, YouTube Live, Facebook Live</td>
+            </tr>
+            <tr>
+                <td>Online Gaming</td>
+                <td>3-6 Mbps (downstream)</td>
+                <td>Xbox Live, PlayStation Network, Steam</td>
+            </tr>
+            <tr>
+                <td>Video Conferencing</td>
+                <td>1-4 Mbps</td>
+                <td>Zoom, Skype, Google Meet</td>
+            </tr>
+        </table>
+        
+        <h2 id="devices">Impact of Multiple Devices</h2>
+        <p>When multiple devices are connected to the same network, the bandwidth needs can add up quickly. It is important to consider the cumulative requirements:</p>
+        
+        <ul>
+            <li><strong>Household with Light Usage</strong> (Browsing, Social Media): 10-15 Mbps</li>
+            <li><strong>Household with Heavy Usage</strong> (Streaming HD Content, Online Gaming): 25-50 Mbps</li>
+            <li><strong>Smart Home Devices</strong> (IoT Devices): 5-10 Mbps additional</li>
+        </ul>
+        
+        <p>Here is an example scenario:</p>
+        
+        <p><strong>Family of Four</strong></p>
+        <ul>
+            <li>Parents Streaming HD Content (2x 5 Mbps)</li>
+            <li>Children Online Gaming (2x 3 Mbps)</li>
+            <li>Two Smart Home Devices (2x 2 Mbps)</li>
+        </ul>
+        
+        <p><strong>Total Required Bandwidth:</strong> 20 Mbps + 6 Mbps + 4 Mbps = 30 Mbps</p>
+        
+        <h2 id="troubleshooting">Troubleshooting Common Streaming Issues</h2>
+        <p>If customers experience buffering or poor stream quality, consider the following troubleshooting steps:</p>
+        
+        <h3>Network Optimization</h3>
+        <ul>
+            <li>Ensure router is placed centrally in the home for optimal coverage.</li>
+            <li>Minimize physical obstructions (walls, furniture) between the router and devices.</li>
+            <li>Update the router's firmware to the latest version.</li>
+            <li>Consider upgrading to a newer router with better bandwidth management features.</li>
+        </ul>
+        
+        <h3>Manage Network Traffic</h3>
+        <ul>
+            <li>Schedule heavy downloads or uploads during off-peak hours.</li>
+            <li>Limit the number of devices connected to the network simultaneously, if possible.</li>
+        </ul>
+        
+        <h3>Check for Interference</h3>
+        <ul>
+            <li>Ensure devices using the same frequency are not causing interference (e.g., cordless phones, microwaves).</li>
+            <li>Switch to the 5GHz frequency band if the router supports it, to avoid congestion on the 2.4GHz band.</li>
+        </ul>
+        
+        <h3>Upgrade Internet Plan</h3>
+        <p>If the customer's usage consistently exceeds the available bandwidth, consider discussing an upgrade to a higher-tier internet plan that can accommodate their needs.</p>
+        
+        <h3>Verify with Speed Test</h3>
+        <p>Advise the customer to perform a speed test to check their actual bandwidth:</p>
+        <ol>
+            <li>Visit a reliable speed test website (e.g., Speedtest.net).</li>
+            <li>Ensure no other devices are actively using the internet during the test.</li>
+            <li>Compare the results to their subscribed plan and the recommended requirements.</li>
+        </ol>
+        
+        <h2>Additional Resources</h2>
+        <p>For further reading and support, the following resources may be useful:</p>
+        <ul>
+            <li><a href="https://www.netflix.com/networkconditions/" target="_blank">Netflix Internet Connection Speed Recommendations</a></li>
+            <li><a href="https://help.hulu.com/s/article/recommended-internet-speeds" target="_blank">Hulu Recommended Internet Speeds</a></li>
+            <li><a href="https://support.google.com/youtube/answer/78358?hl=en" target="_blank">YouTube Video Quality & Bandwidth Management</a></li>
+        </ul>
+        
+    </div>
+</body>
+</html>

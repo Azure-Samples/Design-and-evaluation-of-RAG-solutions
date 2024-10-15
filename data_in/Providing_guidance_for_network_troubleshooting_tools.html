@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Troubleshooting Tools - QuickConnect Customer Support Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f9;
+        }
+        ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .important-note {
+            background: #ffefc0;
+            padding: 10px;
+            border-left: 4px solid #f9be00;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>QuickConnect Customer Support Guide</h1>
+        <h2>Providing Guidance for Network Troubleshooting Tools</h2>
+
+        <p>As a QuickConnect customer service agent, it is essential to be well-equipped with the knowledge and tools necessary to help customers troubleshoot network issues efficiently. This document provides a comprehensive guide on various network troubleshooting tools, explaining their usage, and providing detailed steps on how to utilize them effectively.</p>
+
+        <h3>1. PING Command</h3>
+        <p>The PING command checks the connectivity between the customer's device and a target host (e.g., a website or IP address). It measures the round-trip time data packets take to reach the target and return.</p>
+        <table>
+            <tr>
+                <th>Usage</th>
+                <td>ping [target IP address or URL]</td>
+            </tr>
+            <tr>
+                <th>Example</th>
+                <td>ping www.example.com</td>
+            </tr>
+            <tr>
+                <th>Steps</th>
+                <td>
+                    <ul>
+                        <li>Open the Command Prompt (Windows) or Terminal (Mac/Linux).</li>
+                        <li>Type <strong>ping</strong> followed by the target IP address or URL.</li>
+                        <li>Press Enter to execute the command.</li>
+                        <li>Analyze the output to check packet loss and latency.</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+
+        <h3>2. TRACERT/TRACEROUTE Command</h3>
+        <p>The TRACERT (Windows) or TRACEROUTE (Mac/Linux) command traces the route that packets take from the customer's device to a specific target, helping diagnose where connection issues occur along the path.</p>
+        <table>
+            <tr>
+                <th>Usage</th>
+                <td>tracert (Windows) / traceroute (Mac/Linux) [target IP address or URL]</td>
+            </tr>
+            <tr>
+                <th>Example</th>
+                <td>tracert www.example.com (Windows)</td>
+            </tr>
+            <tr>
+                <th>Steps</th>
+                <td>
+                    <ul>
+                        <li>Open the Command Prompt (Windows) or Terminal (Mac/Linux).</li>
+                        <li>Type <strong>tracert</strong> or <strong>traceroute</strong> followed by the target IP address or URL.</li>
+                        <li>Press Enter to execute the command.</li>
+                        <li>Review the output displaying each hop and latency to diagnose where the connection delay or failure occurs.</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+
+        <h3>3. NSLOOKUP Command</h3>
+        <p>The NSLOOKUP command retrieves the DNS records for a domain, helping diagnose DNS issues. This can verify if the domain name resolves correctly to an IP address.</p>
+        <table>
+            <tr>
+                <th>Usage</th>
+                <td>nslookup [domain]</td>
+            </tr>
+            <tr>
+                <th>Example</th>
+                <td>nslookup www.example.com</td>
+            </tr>
+            <tr>
+                <th>Steps</th>
+                <td>
+                    <ul>
+                        <li>Open the Command Prompt (Windows) or Terminal (Mac/Linux).</li>
+                        <li>Type <strong>nslookup</strong> followed by the domain name.</li>
+                        <li>Simpler output may include information on the resolving IP addresses and the DNS server queried.</li>
+                        <li>Analyze the output to ensure the domain is correctly resolving.</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+
+        <h3>4. IPCONFIG/IFCONFIG Command</h3>
+        <p>IPCONFIG (Windows) or IFCONFIG (Mac/Linux) commands display the network configuration details for the customer's device, helping to verify IP address settings, subnet masks, and default gateways.</p>
+        <table>
+            <tr>
+                <th>Usage</th>
+                <td>ipconfig (Windows) / ifconfig (Mac/Linux)</td>
+            </tr>
+            <tr>
+                <th>Example</th>
+                <td>ipconfig (Windows)</td>
+            </tr>
+            <tr>
+                <th>Steps</th>
+                <td>
+                    <ul>
+                        <li>Open the Command Prompt (Windows) or Terminal (Mac/Linux).</li>
+                        <li>Type <strong>ipconfig</strong> (Windows) or <strong>ifconfig</strong> (Mac/Linux).</li>
+                        <li>Press Enter to execute the command.</li>
+                        <li>Review the output for network adapter details, IP address, subnet mask, and default gateway.</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+
+        <h3>5. NETSTAT Command</h3>
+        <p>The NETSTAT command provides information about network connections, routing tables, and network interface statistics. It helps in diagnosing and monitoring network activity on the customer's device.</p>
+        <table>
+            <tr>
+                <th>Usage</th>
+                <td>netstat [options]</td>
+            </tr>
+            <tr>
+                <th>Example</th>
+                <td>netstat -a</td>
+            </tr>
+            <tr>
+                <th>Steps</th>
+                <td>
+                    <ul>
+                        <li>Open the Command Prompt (Windows) or Terminal (Mac/Linux).</li>
+                        <li>Type <strong>netstat</strong> followed by the desired options (e.g., <strong>-a</strong> for all connections).</li>
+                        <li>Press Enter to execute the command.</li>
+                        <li>Review the output containing active connections, listening ports, and other vital statistics.</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+
+        <h3>6. SPEEDTEST Command</h3>
+        <p>The Speedtest command measures the customer's internet connection speed, including download and upload speeds. It helps diagnose if speed issues are causing network problems.</p>
+        <table>
+            <tr>
+                <th>Usage</th>
+                <td>speedtest</td>
+            </tr>
+            <tr>
+                <th>Example</th>
+                <td>speedtest (requires installation of Speedtest CLI)</td>
+            </tr>
+            <tr>
+                <th>Steps</th>
+                <td>
+                    <ul>
+                        <li>Open the Command Prompt (Windows) or Terminal (Mac/Linux).</li>
+                        <li>Ensure the Speedtest CLI tool is installed. If not, guide the customer to install it using appropriate package managers (e.g., <strong>brew install speedtest-cli</strong> for Mac).</li>
+                        <li>Type <strong>speedtest</strong> and press Enter.</li>
+                        <li>Allow the test to complete and display the results, showing download and upload speeds.</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+
+        <h3>7. Wireshark</h3>
+        <p>Wireshark is a network protocol analyzer that allows for packet-level analysis. It is an advanced tool for detailed diagnostics. Guide advanced users through capturing and analyzing network traffic.</p>
+        <table>
+            <tr>
+                <th>Usage</th>
+                <td>Requires installation and GUI operation</td>
+            </tr>
+            <tr>
+                <th

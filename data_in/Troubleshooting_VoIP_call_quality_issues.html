@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Troubleshooting VoIP Call Quality Issues - QuickConnect</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            display: block;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        h2 {
+            color: #555;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+            text-align: left;
+        }
+        ul {
+            list-style-type: disc;
+            margin: 0 0 20px 20px;
+        }
+        ol {
+            margin: 0 0 20px 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Troubleshooting VoIP Call Quality Issues</h1>
+        <p>Voice over Internet Protocol (VoIP) is a technology that allows users to make voice calls using a broadband internet connection instead of a regular (or analog) phone line. While VoIP offers many benefits, users may sometimes experience call quality issues. This document provides customer service agents at QuickConnect with a comprehensive guide to troubleshooting VoIP call quality issues.</p>
+
+        <h2>Common VoIP Call Quality Issues</h2>
+        <p>The table below lists some common VoIP call quality problems and their potential causes:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Issue</th>
+                    <th>Description</th>
+                    <th>Potential Causes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Echo</td>
+                    <td>The caller hears their own voice a second or two after speaking.</td>
+                    <td>Poor network configuration, high latency, or incompatible hardware.</td>
+                </tr>
+                <tr>
+                    <td>Delay (Latency)</td>
+                    <td>There is a noticeable delay between speaking and the other party hearing the spoken words.</td>
+                    <td>Network congestion, long network paths, or poor quality of service (QoS) settings.</td>
+                </tr>
+                <tr>
+                    <td>Choppy Audio</td>
+                    <td>The audio cuts in and out during the call.</td>
+                    <td>Packet loss, network congestion, or insufficient bandwidth.</td>
+                </tr>
+                <tr>
+                    <td>Jitter</td>
+                    <td>Irregularities in the timing of packet delivery, causing uneven audio.</td>
+                    <td>Network congestion, poor QoS settings, or poor hardware performance.</td>
+                </tr>
+                <tr>
+                    <td>One-Way Audio</td>
+                    <td>One party cannot hear the other, but the other party can hear them.</td>
+                    <td>Firewall configuration issues, NAT traversal problems, or network misconfiguration.</td>
+                </tr>
+                <tr>
+                    <td>Dropped Calls</td>
+                    <td>The call unexpectedly disconnects.</td>
+                    <td>Network instability, poor signal, or high packet loss.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Steps to Troubleshoot VoIP Call Quality Issues</h2>
+        <ol>
+            <li>
+                <strong>Identify and Reproduce the Issue:</strong>
+                <p>Ask the customer to provide specific details about the issue, including when it occurs, how often it occurs, and if it affects all calls or only certain ones. Ask them to perform a test call and note any patterns or specific behaviors.</p>
+            </li>
+            <li>
+                <strong>Check Network Connection:</strong>
+                <p>Ensure the customer’s internet connection is stable and offers sufficient bandwidth. Ask the customer to run a speed test and provide the results. VoIP generally requires a minimum of 100 kbps upload and download speeds per call, with low latency and jitter.</p>
+                <ul>
+                    <li><strong>Bandwidth:</strong> Sufficient bandwidth is critical. Multiple simultaneous calls or heavy internet usage can strain bandwidth.</li>
+                    <li><strong>Ping/Latency:</strong> Latency should be less than 150 ms for good call quality.</li>
+                    <li><strong>Jitter:</strong> Jitter should be less than 30 ms to ensure consistent call quality.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Examine Network Configuration:</strong>
+                <p>Ensure that the customer’s network is properly configured for VoIP traffic.</p>
+                <ul>
+                    <li><strong>Quality of Service (QoS):</strong> Enable QoS settings on the router to prioritize VoIP traffic over other types of network traffic.</li>
+                    <li><strong>Firewalls:</strong> Ensure that the necessary ports for VoIP traffic are open and not being blocked by a firewall.</li>
+                    <li><strong>Network Address Translation (NAT):</strong> Verify that NAT settings are properly configured to handle VoIP packets.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Inspect VoIP Hardware:</strong>
+                <p>Check for hardware-related issues that may be affecting VoIP call quality.</p>
+                <ul>
+                    <li>Verify that the customer's VoIP devices (phones, adapters, etc.) are working correctly and have the latest firmware updates installed.</li>
+                    <li>Ensure that cabling is in good condition and properly connected.</li>
+                    <li>Test with different devices to rule out faulty hardware.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Monitor Network Traffic:</strong>
+                <p>Use network monitoring tools to identify potential sources of network congestion or packet loss.</p>
+                <ul>
+                    <li>Check for high usage of bandwidth-heavy applications that may be running concurrently with VoIP calls (e.g., streaming video, large file downloads).</li>
+                    <li>Identify any unusual spikes in traffic that may indicate network issues.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Review SIP Settings:</strong>
+                <p>Confirm that the Session Initiation Protocol (SIP) settings are correctly configured on the customer’s VoIP devices.</p>
+                <ul>
+                    <li>Verify that the SIP registrar/proxy server settings are correct.</li>
+                    <li>Ensure that SIP ALG (Application Layer Gateway) is disabled on the customer’s router, as it can interfere with VoIP traffic.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Update Firmware and Software:</strong>
+                <p>Ensure that the customer’s VoIP devices and routers have the latest firmware and software updates installed to address any known issues and improve performance.</p>
+            </li>
+            <li>
+                <strong>Use VoIP-Optimized Routers:</strong>
+                <p>Recommend the use of routers that are optimized for VoIP traffic. Some routers are specifically designed to handle the demands of VoIP calls and can help improve call quality.</p>
+            </li>
+            <li>
+                <strong>Professional Network Assessment:</strong>
+                <p>If the issue persists, recommend a professional network assessment to identify and address complex network issues that may be affecting VoIP call quality.</p>
+            </li>
+        </ol>
+
+        <h2>Additional Troubleshooting Tips</h2>
+        <ul>
+            <li><strong>Reduce Network Load:</strong> Ask the customer to limit the use of bandwidth-heavy applications during VoIP calls.</li>
+            <li><strong>Use a Wired Connection:</strong> Suggest using a wired Ethernet connection instead of Wi-Fi for VoIP calls to reduce potential interference and latency.</li>
+            <li><strong>Check for Interference:</strong> Ensure that there are no sources of electromagnetic interference (e.g., microwave ovens, cordless phones) near the VoIP devices or network equipment.</li>
+            <li><strong>Adjust Codec Settings:</strong> Experiment with different audio codecs (e.g., G.711, G.729) to find one that offers better performance on the customer’s network.</li>
+        </ul>
+
+        <h2>Escalation Protocol</h2>
+        <p>If the customer’s VoIP call quality issues cannot be resolved after following the troubleshooting steps outlined above, follow the escalation protocol:</p>
+        <ol>
+            <li>Document all troubleshooting steps taken and the results.</li>
+            <li>Escalate the issue to the next tier of support with detailed notes and any relevant diagnostic information gathered.</li>
+            <

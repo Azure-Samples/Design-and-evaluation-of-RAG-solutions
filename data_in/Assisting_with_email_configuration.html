@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickConnect Customer Service: Email Configuration Assistance</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1, h2, h3 {
+            color: #003366;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        ul {
+            list-style-type: disc;
+            margin: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        .content-section {
+            margin-bottom: 20px;
+        }
+        .note {
+            color: #e60000;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>QuickConnect Customer Service Documentation</h1>
+    <h2>Assisting with Email Configuration</h2>
+    
+    <div class="content-section">
+        <h3>1. Introduction</h3>
+        <p>
+            Email configuration is an essential step to ensure that our customers can effectively send and receive emails without any issues. This document aims to provide QuickConnect customer service agents with detailed instructions on how to assist customers with setting up and troubleshooting their email accounts. This includes email client configuration, server settings, and common troubleshooting issues.
+        </p>
+    </div>
+
+    <div class="content-section">
+        <h3>2. Common Email Clients</h3>
+        <p>
+            Before diving into email configuration specifics, it’s important to be aware of the most common email clients our customers might be using. These include:
+        </p>
+        <ul>
+            <li>Microsoft Outlook</li>
+            <li>Apple Mail</li>
+            <li>Mozilla Thunderbird</li>
+            <li>Gmail (when configuring with external clients or apps)</li>
+            <li>Android Mail App</li>
+            <li>iOS Mail App</li>
+        </ul>
+    </div>
+    
+    <div class="content-section">
+        <h3>3. Email Client Configuration Steps</h3>
+        <p>The following tables provide the necessary steps for configuring each of the above email clients:</p>
+        
+        <h4>Microsoft Outlook</h4>
+        <table>
+            <tr>
+                <th>Step</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Open Outlook and click on "File" in the top-left corner.</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Click on "Add Account".</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Enter the user's email address and click "Connect".</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Choose "IMAP" or "POP" account type.</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Enter the server settings (Refer to section 4 below).</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Click "Done".</td>
+            </tr>
+        </table>
+        
+        <h4>Apple Mail</h4>
+        <table>
+            <tr>
+                <th>Step</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Open Apple Mail and go to "Mail" > "Add Account".</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Select "Other Mail Account" and click "Continue".</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Enter the user's name, email address, and password, then click "Sign In".</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Enter the server settings (Refer to section 4 below).</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Click "Done".</td>
+            </tr>
+        </table>
+        
+        <!-- Add similar tables for other email clients as required -->
+    </div>
+    
+    <div class="content-section">
+        <h3>4. Server Settings for QuickConnect Email</h3>
+        <p>Provide the correct inbound and outbound server settings to customers based on their chosen email account type (IMAP or POP). These settings are essential for a successful email configuration.</p>
+        
+        <h4>IMAP and SMTP Settings</h4>
+        <table>
+            <tr>
+                <th>Setting</th>
+                <th>IMAP</th>
+                <th>SMTP</th>
+            </tr>
+            <tr>
+                <td>Server Address</td>
+                <td>imap.quickconnect.com</td>
+                <td>smtp.quickconnect.com</td>
+            </tr>
+            <tr>
+                <td>Port</td>
+                <td>993</td>
+                <td>587</td>
+            </tr>
+            <tr>
+                <td>Encryption</td>
+                <td>SSL/TLS</td>
+                <td>STARTTLS</td>
+            </tr>
+            <tr>
+                <td>Authentication</td>
+                <td>Required</td>
+                <td>Required</td>
+            </tr>
+        </table>
+        
+        <h4>POP and SMTP Settings</h4>
+        <table>
+            <tr>
+                <th>Setting</th>
+                <th>POP</th>
+                <th>SMTP</th>
+            </tr>
+            <tr>
+                <td>Server Address</td>
+                <td>pop.quickconnect.com</td>
+                <td>smtp.quickconnect.com</td>
+            </tr>
+            <tr>
+                <td>Port</td>
+                <td>995</td>
+                <td>587</td>
+            </tr>
+            <tr>
+                <td>Encryption</td>
+                <td>SSL/TLS</td>
+                <td>STARTTLS</td>
+            </tr>
+            <tr>
+                <td>Authentication</td>
+                <td>Required</td>
+                <td>Required</td>
+            </tr>
+        </table>
+    </div>
+    
+    <div class="content-section">
+        <h3>5. Troubleshooting Common Issues</h3>
+        <p>Despite following the correct steps, customers may encounter issues. Here are common issues seen during email configuration and their respective solutions:</p>
+        
+        <h4>Incorrect Password</h4>
+        <p>
+            Error Message: "Login Error: Invalid username or password".<br>
+            <strong>Solution:</strong>
+            <ul>
+                <li>Double-check the email address and password entered during setup.</li>
+                <li>If the customer is certain of their password, verify there are no accidental spaces or typos.</li>
+                <li>Advise the customer to reset their password if they cannot remember it.</li>
+            </ul>
+        </p>
+        
+        <h4>Server Settings Errors</h4>
+        <p>
+            Error Message: "Cannot connect to server".<br>
+            <strong>Solution:</strong>
+            <ul>
+                <li>Ensure the customer has entered the correct incoming and outgoing server addresses and ports.</li>
+                <li>Verify the encryption settings (SSL for IMAP and POP, STARTTLS for SMTP).</li>
+                <li>Check for any firewall or antivirus software potentially blocking the ports or server connections.</li>
+            </ul>
+        </p>
+        
+        <h4>Failed Authentication</h4>
+        <p>
+            Error Message: "Authentication Error".<br>
+            <strong>Solution:</strong>
+            <ul>
+                <li>Ensure the username is the full email address.</li>
+                <li>Verify that the "Send authentication" option is enabled in the outgoing server settings.</li>
+                <li>Check if the email client requires a specific authentication method that aligns with the server's (e.g., OAuth2).</li>
+            </ul>
+        </p>
+        
+        <h4>Email Sending Issues</h4>
+        <p>
+            Error Message: "Unable to send message".<br>
+            <strong>Solution:</strong>
+            <ul>
+                <li>Ensure the customer is connected to the internet and can access other websites or services.</li>
+                <li>Check the SMTP server settings and ensure the port and encryption types are correct.</li>
+                <li>Advise the customer to try sending a test email to themselves to verify the functionality.</li>
+            </ul>

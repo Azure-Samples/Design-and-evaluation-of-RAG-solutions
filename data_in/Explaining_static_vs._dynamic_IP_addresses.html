@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding Static vs. Dynamic IP Addresses</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1, h2 {
+            color: #4CAF50;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .note-box {
+            background-color: #ffeb3b;
+            border-left: 6px solid #ffeb3b;
+            padding: 10px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Understanding Static vs. Dynamic IP Addresses</h1>
+
+<p>Welcome to the QuickConnect Customer Support guide. This document will help you understand the key differences between static and dynamic IP addresses. Understanding these concepts will enable you to assist customers effectively when they have questions regarding their internet connectivity, configuration, or experience technical issues related to their IP addresses.</p>
+
+<h2>What is an IP Address?</h2>
+<p>An Internet Protocol (IP) address is a unique string of numbers separated by periods (IPv4) or colons (IPv6) that identifies each computer using the Internet Protocol to communicate over a network. For example, an IPv4 address looks like <code>192.168.1.1</code>, while an IPv6 address looks like <code>2001:0db8:85a3:0000:0000:8a2e:0370:7334</code>.</p>
+
+<p>IP addresses are essential as they ensure that information requested by a device on a network is sent to the correct recipient. They can either be static or dynamic, which we'll explore in detail below.</p>
+
+<h2>Static IP Addresses</h2>
+<p>A static IP address is an IP address that is manually configured for a device and does not change over time. It is a fixed address assigned to a device, ensuring that the device always has the same IP address on the network.</p>
+
+<p><strong>Key Characteristics of Static IP Addresses:</strong></p>
+<ul>
+    <li><strong>Persistent:</strong> The IP address stays the same permanently until it is manually changed.</li>
+    <li><strong>Reliable for Servers:</strong> Ideal for servers and websites that require consistent connectivity.</li>
+    <li><strong>Manual Configuration:</strong> Needs to be set up manually by a network administrator.</li>
+    <li><strong>Security Risks:</strong> More vulnerable to attacks if not properly secured since the address is always the same.</li>
+</ul>
+
+<p><strong>Advantages of Static IP Addresses:</strong></p>
+<ul>
+    <li><strong>Stability:</strong> Crucial for hosting services, VPN, gaming servers, and remote access applications.</li>
+    <li><strong>Customizability:</strong> Easier to manage specific configurations, firewall settings, and network policies.</li>
+</ul>
+
+<p><strong>Disadvantages of Static IP Addresses:</strong></p>
+<ul>
+    <li><strong>Higher Cost:</strong> Generally more expensive as most ISPs charge extra for static IP addresses.</li>
+    <li><strong>Manual Management:</strong> Requires manual setup and administration, which can be time-consuming.</li>
+</ul>
+
+<h2>Dynamic IP Addresses</h2>
+<p>In contrast, a dynamic IP address is assigned by a DHCP (Dynamic Host Configuration Protocol) server and may change each time the device connects to a network. This allows for a more efficient allocation of IP addresses.</p>
+
+<p><strong>Key Characteristics of Dynamic IP Addresses:</strong></p>
+<ul>
+    <li><strong>Temporary:</strong> The IP address can change periodically or each time the device reconnects to the network.</li>
+    <li><strong>Automatic Configuration:</strong> Automatically assigned by a DHCP server without user intervention.</li>
+    <li><strong>Common Use:</strong> Typically used for consumer devices such as laptops, smartphones, and home networks.</li>
+    <li><strong>Lower Cost:</strong> Less expensive than static IP addresses as no dedicated resources are required.</li>
+</ul>
+
+<p><strong>Advantages of Dynamic IP Addresses:</strong></p>
+<ul>
+    <li><strong>Ease of Use:</strong> No need for manual configuration; the process is automatic and straightforward.</li>
+    <li><strong>Cost-Effective:</strong> Generally included in the basic package of ISPs, making it more cost-effective for regular users.</li>
+    <li><strong>Security Through Obscurity:</strong> Regularly changing IP addresses make targeted attacks more challenging.</li>
+</ul>
+
+<p><strong>Disadvantages of Dynamic IP Addresses:</strong></p>
+<ul>
+    <li><strong>Dependability:</strong> Not suitable for applications requiring a consistent address, like hosting services or remote server access.</li>
+    <li><strong>Potential for Downtime:</strong> In rare cases, the renewal process of a dynamic IP can lead to short disconnections.</li>
+</ul>
+
+<h2>Practical Scenarios and Use Cases</h2>
+<table>
+    <tr>
+        <th>Scenario</th>
+        <th>Recommended IP Type</th>
+        <th>Reason</th>
+    </tr>
+    <tr>
+        <td>Hosting a website</td>
+        <td>Static IP</td>
+        <td>Ensures the website is reliably accessible with a consistent address.</td>
+    </tr>
+    <tr>
+        <td>Remote access to a corporate network</td>
+        <td>Static IP</td>
+        <td>Provides a stable connection point, necessary for VPNs and remote desktop connections.</td>
+    </tr>
+    <tr>
+        <td>Home internet usage (browsing, streaming)</td>
+        <td>Dynamic IP</td>
+        <td>Cost-effective and sufficient for typical usage without the need for consistent IP.</td>
+    </tr>
+    <tr>
+        <td>Hosting a gaming server</td>
+        <td>Static IP</td>
+        <td>Ensures players can reliably connect to the game server.</td>
+    </tr>
+    <tr>
+        <td>Mobile device connectivity</td>
+        <td>Dynamic IP</td>
+        <td>Automatically assigned IP addresses as the device changes networks frequently.</td>
+    </tr>
+</table>
+
+<h2>Common Customer Questions</h2>
+
+<div class="note-box">
+    <p><strong>Q1: What type of IP address does QuickConnect provide by default?</strong><br>
+    <strong>A1:</strong> QuickConnect typically provides dynamic IP addresses by default for standard customer plans. Static IP addresses can be requested and are generally available for an additional fee.</p>
+</div>
+
+<div class="note-box">
+    <p><strong>Q2: Can I switch from a dynamic IP to a static IP?</strong><br>
+    <strong>A2:</strong> Yes, customers can request a switch to a static IP address. This involves contacting QuickConnect support and might incur additional costs based on the customer's plan.</p>
+</div>
+
+<div class="note-box">
+    <p><strong>Q3: Are there any security concerns I should be aware of when using a static IP?</strong><br>
+    <strong>A3:</strong> Yes, since a static IP does not change, it can be a more consistent target for cyber attacks. It is important to implement robust security measures such as firewalls and security updates to protect devices.</p>
+</div>
+
+<h2>How to Identify IP Address Type</h2>
+<p>For customers curious about their IP address type, here's a step-by-step guide:</p>
+<ol>
+    <li>Ask the customer to visit a website like <a href="https://www.whatismyip.com" target="_blank">WhatIsMyIP</a>.</li>
+    <li>Have the customer note down their current IP address.</li>
+    <li>Instruct them to reboot their router or device and reconnect to the internet.</li>
+    <li>Ask them to visit the same website again and check if the IP address has changed.</li>
+</ol>
+<p>If the IP address changes, it’s likely a dynamic IP. If it remains the same, it may indicate a static IP. For verification, customers can always contact QuickConnect support.</p>
+
+<h2>Supporting Customers with IP Address Queries</h2>
+<p>When dealing with customers, always ensure to:</p>
+<ul>
+    <li><strong>Clarify the Terms:</strong> Explain the differences in simple terms to avoid confusion.</li>
+    <li><strong>Understand the Need:</strong> Assess why a customer might need a static or dynamic IP (e.g., home use vs. business use).</li>
+    <li><

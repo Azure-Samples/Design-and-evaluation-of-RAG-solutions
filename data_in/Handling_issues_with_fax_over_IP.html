@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickConnect Customer Service Documentation - Handling Issues with Fax over IP</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1, h2, h3 {
+            color: #2E8B57;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+        ul {
+            list-style-type: square;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>QuickConnect Customer Service Documentation</h1>
+    <h2>Handling Issues with Fax over IP</h2>
+    <p>
+        Fax over IP (FoIP) is a method of sending faxes using Voice over Internet Protocol (VoIP) networks. While FoIP can provide cost savings and increased flexibility, there can be technical challenges associated with its use. This guide will help customer service agents at QuickConnect troubleshoot and resolve common problems faced by customers when using FoIP.
+    </p>
+
+    <h3>Introduction to Fax over IP</h3>
+    <p>
+        FoIP allows for sending and receiving faxes via the internet, eliminating the need for traditional phone lines. FoIP transmits fax data over an IP network such as the internet or a private VoIP network. This technology can lead to significant cost reductions and ease of integration with digital systems.
+    </p>
+
+    <h3>Common Issues and Solutions</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Issue</th>
+                <th>Possible Causes</th>
+                <th>Solution</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Failed Fax Transmission</td>
+                <td>
+                    <ul>
+                        <li>Network instability</li>
+                        <li>Incompatible fax machines</li>
+                        <li>Incorrect settings</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>Check and stabilise network connections</li>
+                        <li>Ensure compatibility of fax equipment</li>
+                        <li>Configure settings correctly</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>Poor Fax Quality</td>
+                <td>
+                    <ul>
+                        <li>Network latency</li>
+                        <li>Low bandwidth</li>
+                        <li>Inappropriate codec</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>Reduce network latency</li>
+                        <li>Increase available bandwidth</li>
+                        <li>Use T.38 codec</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>Intermittent Connectivity</td>
+                <td>
+                    <ul>
+                        <li>Network congestion</li>
+                        <li>Faulty hardware</li>
+                        <li>ISP issues</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>Reduce network congestion</li>
+                        <li>Replace or repair faulty hardware</li>
+                        <li>Contact ISP for assistance</li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Step-by-Step Troubleshooting Guide</h3>
+    <ol>
+        <li><strong>Verify Network Connections:</strong> 
+            <ul>
+                <li>Ensure that the fax machine or FoIP adapter is properly connected to the network.</li>
+                <li>Check the quality and stability of the network connection. Unstable or weak connections are a common cause of transmission failures.</li>
+            </ul>
+        </li>
+        <li><strong>Check Device Compatibility:</strong>
+            <ul>
+                <li>Confirm that both the sending and receiving fax machines are compatible with FoIP technology.</li>
+                <li>Check the manufacturer's specifications for supported protocols (e.g., T.38, G.711).</li>
+            </ul>
+        </li>
+        <li><strong>Adjust Bandwidth and Latency:</strong>
+            <ul>
+                <li>Ensure that there is sufficient bandwidth for FoIP operations. High-quality faxes typically require stable, high-speed internet.</li>
+                <li>Minimise network latency. High latency can disrupt the fax signal and lead to poor quality or failed transmissions.</li>
+            </ul>
+        </li>
+        <li><strong>Configure Appropriate Codec:</strong>
+            <ul>
+                <li>Switch to the T.38 fax relay protocol, which is specifically designed for fax transmission over IP networks.</li>
+                <li>Ensure the appropriate codec is configured on all devices involved in fax transmission.</li>
+            </ul>
+        </li>
+        <li><strong>Perform Regular Maintenance:</strong>
+            <ul>
+                <li>Schedule routine checks of network and fax hardware to identify and resolve potential issues proactively.</li>
+                <li>Regularly update firmware and software to ensure compatibility with the latest technologies and security standards.</li>
+            </ul>
+        </li>
+    </ol>
+
+    <h3>Technical Specifications</h3>
+    <p>Below are some technical specifications and terminology helpful for supporting fax over IP:</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Specification</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>T.38</strong></td>
+                <td>A protocol designed to enable fax transmissions over IP networks in real time.</td>
+            </tr>
+            <tr>
+                <td><strong>G.711</strong></td>
+                <td>An audio codec used in VoIP that can also be used for fax transmissions; less reliable than T.38.</td>
+            </tr>
+            <tr>
+                <td><strong>Latency</strong></td>
+                <td>The delay between sending a signal and its receipt. High latency can affect fax transmission quality.</td>
+            </tr>
+            <tr>
+                <td><strong>Bandwidth</strong></td>
+                <td>The amount of data that can be transmitted over a network in a given time period. Sufficient bandwidth is crucial for successful faxing.</td>
+            </tr>
+            <tr>
+                <td><strong>QoS (Quality of Service)</strong></td>
+                <td>Network feature that prioritizes critical network traffic, ensuring adequate performance for important services like VoIP and FoIP.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Case Study: Successful Resolution of a FoIP Issue</h3>
+    <p>
+        A QuickConnect customer, John, was experiencing intermittent fax failures using FoIP. John reported that sometimes the faxes would partially send, and other times they wouldn't send at all. Here’s how we helped John resolve his issue:
+    </p>
+    <ol>
+        <li><strong>Initial Contact:</strong> We began by understanding the specific nature of John’s problem. We asked detailed questions to gather information about the symptoms, frequency, and conditions under which the failures occurred.</li>
+        <li><strong>Network Diagnosis:</strong> Our support team conducted a thorough check of John's network connection. We discovered that his latency was high during peak usage times, leading to failed faxes.</li>
+        <li><strong>Bandwidth Allocation:</strong> We advised John to increase the priority of his FoIP traffic using QoS settings. This ensured that faxes were prioritised over less critical network activities.</li>
+        <li><strong>Hardware Inspection:</strong> John’s fax machine and router were updated to the latest firmware to ensure compatibility with T.38 protocol.</li>
+        <li><strong>Monitoring and Follow-up:</strong> We monitored John's fax transmissions for several days post-intervention and confirmed that the issue was fully resolved. John reported a significant improvement in fax reliability.</li>
+    </ol>
+
+    <h3>FAQs</h3>
+    <h4>Q: Why is my fax failing to send over IP?</h4>
+    <p>
+        A: Common reasons include network instability, incorrect settings, and incompatible hardware. Follow the troubleshooting steps outlined above to diagnose and resolve the issue.
+    </p>
+
+    <h4>Q: What is T.38 and why is it important?</h4>
+    <p>
+        A: T.38 is a protocol designed specifically for sending faxes over IP networks. It helps ensure higher reliability and quality compared to other methods such as G.711.
+    </p>
+
+    <h4>Q: How can I improve the quality of my fax transmissions?</h4>
+    <p>
+        A: Ensure you have a stable, high-speed internet connection. Configure your equipment to use the T.38 codec and prioritise your fax traffic using

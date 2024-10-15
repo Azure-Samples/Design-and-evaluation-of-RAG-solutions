@@ -1,0 +1,14 @@
+Description,Count,Token Range,Document Count
+Documents with fewer than 50 tokens,0.0,,
+Documents with fewer than 100 tokens,0.0,,
+Documents with fewer than 150 tokens,0.0,,
+Documents with fewer than 200 tokens,0.0,,
+Documents with fewer than 300 tokens,0.0,,
+Documents with fewer than 400 tokens,0.0,,
+Documents with fewer than 500 tokens,2.0,,
+Documents with fewer than 512 tokens,2.0,,
+Documents with fewer than 600 tokens,2.0,,
+,,0-511,2.0
+,,512-999,65.0
+,,1000-1999,130.0
+,,2000+,0.0

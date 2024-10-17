@@ -1,6 +1,6 @@
 # 1. Design and evaluation of a RAG implementation
 
-The purpose of this repository is to reflect the recommendations to build a RAG (Retrieval-Augmented Generation) solution following the best practices, along with tools and techniques for testing and evaluation. 
+The purpose of this repository is to reflect the recommendations for a RAG (Retrieval-Augmented Generation) solution following the best practices, along with tools and techniques for testing and evaluation. 
 
 This document is divided in sections that follow the standard order of implementation for an end-to-end review of this type of solution, including an optional section to create an AI-generated collection of documents that can be used for leaning purposes.
 

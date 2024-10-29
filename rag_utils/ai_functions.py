@@ -101,7 +101,7 @@ def calculate_rank(aoai_rerank_client, rerank_model_name, text, question):
     user_prompt = """Search Query: """ + question + """
     Text:  """ + text + """
     """
-    print(f'USER PROMPT CALCULATE RANK: {user_prompt}')
+    #print(f'USER PROMPT CALCULATE RANK: {user_prompt}')
     response = call_aoai(aoai_rerank_client, rerank_model_name, system_prompt, user_prompt, 0.0, 800)
 
     if response is not None:
@@ -123,7 +123,6 @@ def generate_answer(aoai_answer_client, aoai_answer_model_name, texts, question,
 
     system_prompt = """
         You are an assistant for Telefónica's agents (not for an end customer). You are replying to questions with information contained in a specific knowledge base provided.
-        Both questions and knowledge base are in Spanish.
         To carry out this task, follow these steps:
         1. It's very important that you read carefully all the Document ID, Titles and Sections of the knowledge base provided.
         2. Analyse the user Question provided.
@@ -176,7 +175,7 @@ def generate_answer(aoai_answer_client, aoai_answer_model_name, texts, question,
         user_prompt = user_prompt + f"Document ID: {text['id']}. Title: {text['title']}. Section: {text[field]}\n"
     user_prompt = user_prompt + "\nQuestion: " + question + "\nFinal Response:"
 
-    print(f'USER PROMPT: {user_prompt}')
+    #print(f'USER PROMPT: {user_prompt}')
 
     return call_aoai(aoai_answer_client, aoai_answer_model_name, system_prompt, user_prompt, 0.0, 800)
 
@@ -193,7 +192,7 @@ def get_filtered_chunks(aoai_rerank_client, rerank_model_name, results, query, m
 
         for future in concurrent.futures.as_completed(futures):
             confidence, answer = future.result()
-            print(f'\tconfidence: {confidence}, \n\tanswer: {answer}')
+            #print(f'\tconfidence: {confidence}, \n\tanswer: {answer}')
             if int(confidence) >= 90:
                 result['answer'] = answer
                 chunks.append(result)
@@ -375,11 +374,11 @@ def index_documents(ai_search_endpoint, ai_search_credential, index_name, embedd
 
     lote = []
     for i, chunk_content in enumerate(chunk_contents):  # Index the chunks using the file name as title
-        print('=================================================================')
+        #print('=================================================================')
         title = chunk_content['title']
         content = chunk_content['content']
         print(f"[{i + 1}]: title: {title}")
-        print(f"\t[{content}]")
+        #print(f"\t[{content}]")
         document = {
             "id": str(i),
             "title": title,
@@ -642,7 +641,7 @@ def generate_topics_and_documents(aoai_client, model_deployment_name, company_na
         with open(filename, 'w', encoding='utf-8') as file:
             file.write(document)
 
-        print(f"Document {i+1} saved as {filename}")
+        print(f"\tDocument {i+1} saved as {filename}")
 
 
 # Create variants of documents to simulate duplicates

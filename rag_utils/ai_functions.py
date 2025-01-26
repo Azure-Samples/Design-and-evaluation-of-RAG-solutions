@@ -21,6 +21,7 @@ from langchain_text_splitters import TokenTextSplitter
 
 from .text_functions import cut_max_tokens, extract_text
 
+THRESHOLD_CONFIDENCE = 90
 
 # Send a call to the model deployed on Azure OpenAI
 def call_aoai(aoai_client, aoai_model_name, system_prompt, user_prompt, temperature, max_tokens):
@@ -39,12 +40,14 @@ def call_aoai(aoai_client, aoai_model_name, system_prompt, user_prompt, temperat
         print(ex)
         response = None
 
+    print(f'RESPONSE: {response}')
+
     return response
 
 
 # Semantic Hybrid Search with filter (the filter is optional)
 # Create first the index and upload documents with 'create_index_and_index_documents.ipynb'
-def semantic_hybrid_search_with_filter(search_client: SearchClient, query: str, aoai_embedding_client, embedding_model_name, embedding_fields, max_docs, select_fields, query_language, filter=''):
+def semantic_hybrid_search_with_filter(search_client: SearchClient, query: str, aoai_embedding_client, embedding_model_name, embedding_fields, max_docs, select_fields, filter=''):
     # Semantic Hybrid Search
 
     embedding = aoai_embedding_client.embeddings.create(input=query, model=embedding_model_name).data[0].embedding
@@ -60,8 +63,7 @@ def semantic_hybrid_search_with_filter(search_client: SearchClient, query: str, 
             query_caption=QueryCaptionType.EXTRACTIVE,
             query_answer=QueryAnswerType.EXTRACTIVE,
             include_total_count=True,
-            top=max_docs,
-            query_language=query_language
+            top=max_docs
         )
     else:
         results = search_client.search(
@@ -74,7 +76,6 @@ def semantic_hybrid_search_with_filter(search_client: SearchClient, query: str, 
             query_answer=QueryAnswerType.EXTRACTIVE,
             include_total_count=True,
             top=max_docs,
-            query_language=query_language,
             vector_filter_mode=VectorFilterMode.PRE_FILTER,
             filter=filter
         )
@@ -83,7 +84,7 @@ def semantic_hybrid_search_with_filter(search_client: SearchClient, query: str, 
 
 
 # Calculate the confidence and generate the 'answer' from the content
-def calculate_rank(aoai_rerank_client, rerank_model_name, text, question):
+def calculate_rank(aoai_rerank_client, rerank_model_name, id, title, content, text, question):
     # Include every relevant detail from the text to ensure all pertinent information is retained.
     system_prompt = """You are an assistant that returns content relevant to a search query from an telecommunications company agent serving customers.
     Return the content needed to understand the context of the answer and only what is relevant to the search query in a field called "answer".
@@ -115,7 +116,7 @@ def calculate_rank(aoai_rerank_client, rerank_model_name, text, question):
         confidence = 0
         answer = ''
 
-    return confidence, answer
+    return id, title, content, confidence, answer
 
 
 # Generate the answer with the chunks filtered by the re-ranker
@@ -187,15 +188,21 @@ def get_filtered_chunks(aoai_rerank_client, rerank_model_name, results, query, m
     with concurrent.futures.ThreadPoolExecutor(max_workers=max_docs) as executor:
         futures = []
         for result in results:
-            chunk = f"{result['title']}. {result['content']}"
-            futures.append(executor.submit(calculate_rank, aoai_rerank_client, rerank_model_name, chunk, query))
+            text = f"{result['title']}. {result['content']}"
+            futures.append(executor.submit(calculate_rank, aoai_rerank_client, rerank_model_name, result['id'], result['title'], result['content'], text, query))
 
         for future in concurrent.futures.as_completed(futures):
-            confidence, answer = future.result()
-            #print(f'\tconfidence: {confidence}, \n\tanswer: {answer}')
-            if int(confidence) >= 90:
-                result['answer'] = answer
-                chunks.append(result)
+            id, title, content, confidence, answer = future.result()
+            print(f'\ttitle: {title}, confidence: {confidence}, \n\tanswer: {answer}')
+            if int(confidence) >= THRESHOLD_CONFIDENCE:
+                chunks.append({
+                    "id": int(id),
+                    "title": title,
+                    "content": content,
+                    "confidence": int(confidence),
+                    "answer": answer
+                    }
+                )
 
             i += 1
             if i == max_docs:
@@ -429,7 +436,7 @@ def generate_answers_and_questions(aoai_client, aoai_model_name, text):
 
     user_prompt = f'Context: "{text}". Response: '
 
-    response = call_aoai(aoai_client, aoai_model_name, system_prompt, user_prompt, 0.5, 4096)
+    response = extract_text(call_aoai(aoai_client, aoai_model_name, system_prompt, user_prompt, 0.5, 4096), '```json', '```')
 
     qa_list = []
     if response is not None:
@@ -468,7 +475,6 @@ def evaluate_answer(aoai_answer_client, aoai_answer_model_name, question, correc
 def execute_test(ai_search_endpoint,
                  ai_search_credential,
                  select_fields,
-                 query_language,
                  aoai_rerank_client,
                  rerank_model_name,
                  aoai_answer_client,
@@ -529,8 +535,7 @@ def execute_test(ai_search_endpoint,
                                                      embedding_model,
                                                      embedding_fields,
                                                      max_retrieve,
-                                                     select_fields,
-                                                     query_language)
+                                                     select_fields)
 
         # Re-rank the chunks
         data = get_filtered_chunks(aoai_rerank_client, rerank_model_name, results, user_question, max_retrieve)
